@@ -1,11 +1,11 @@
-package com.alex.platform.junit.unit.Demo4;
+package com.alex.platform.junit.unit.Demo2;
 
-public class User4 {
+public class User2 {
     private String userId;
     private String name;
     private int age;
 
-    public User4(String userId, String name, int age) {
+    public User2(String userId, String name, int age) {
         this.userId = userId;
         this.name = name;
         this.age = age;

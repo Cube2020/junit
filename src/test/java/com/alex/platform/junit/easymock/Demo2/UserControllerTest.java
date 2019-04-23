@@ -1,8 +1,8 @@
-package com.alex.platform.junit.easymock.Demo4;
+package com.alex.platform.junit.easymock.Demo2;
 
-import com.alex.platform.junit.unit.Demo4.User4;
-import com.alex.platform.junit.unit.Demo4.UserController4;
-import com.alex.platform.junit.unit.Demo4.UserService4;
+import com.alex.platform.junit.unit.Demo2.User2;
+import com.alex.platform.junit.unit.Demo2.UserController2;
+import com.alex.platform.junit.unit.Demo2.UserService2;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,15 +19,18 @@ import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
+/**
+ * Test for controller url
+ */
 @SpringBootTest
 @RunWith(SpringJUnit4ClassRunner.class)
 public class UserControllerTest {
     
     private MockMvc mockMvc;
     @Mock
-    UserService4 userService;
+    UserService2 userService;
     @InjectMocks
-    UserController4 userController;
+    UserController2 userController;
 
 
     @Before
@@ -41,7 +44,7 @@ public class UserControllerTest {
 
     @Test
     public void getUserByIdTest() {
-        User4 user = new User4("1001", "alex", 28);
+        User2 user = new User2("1001", "alex", 28);
         when(userService.query("1001")).thenReturn(user);
         MvcResult result;
         try {

@@ -1,4 +1,4 @@
-package com.alex.platform.junit.unit.Demo4;
+package com.alex.platform.junit.unit.Demo2;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -7,19 +7,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.HashMap;
-import java.util.Map;
-
 @Controller
 @RequestMapping(value = "/user")
-public class UserController4 {
+public class UserController2 {
     @Autowired
-    private UserService4 userService;
+    private UserService2 userService;
 
     @RequestMapping(value = "getUserById")
     @ResponseBody
-    public User4 getUserById(@RequestParam(value = "userId", required = true) String userId, Model model) {
-        User4 user = userService.query(userId);
+    public User2 getUserById(@RequestParam(value = "userId", required = true) String userId, Model model) {
+        User2 user = userService.query(userId);
         return user;
     }
 }

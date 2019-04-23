@@ -1,14 +1,14 @@
-package com.alex.platform.junit.unit.Demo4;
+package com.alex.platform.junit.unit.Demo2;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserService4 {
+public class UserService2 {
     @Autowired
-    private UserDao4 userDao;
+    private UserDao2 userDao;
 
-    public User4 query(String userId) {
+    public User2 query(String userId) {
         return userDao.getUserById(userId);
     }
 }
